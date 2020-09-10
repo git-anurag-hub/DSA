@@ -18,7 +18,7 @@ public:
     Stack(int n){
         arr = new int[n];
         top=-1;
-        for(int i=0;i<5;i++){
+        for(int i=0;i<n;i++){
             arr[i]=0;
         }
     }
@@ -32,7 +32,7 @@ public:
     }
     
     bool isFull(){
-        if(top==4){
+        if(top==n-1){
             return true;
         }else{
             return false;
@@ -79,7 +79,7 @@ public:
     }
     
     void display(){
-        for(int i=4;i>=0;i--){
+        for(int i=n-1;i>=0;i--){
             cout<<arr[i]<<endl;
         }
     }
